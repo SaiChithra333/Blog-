@@ -18,9 +18,10 @@
                 <% if(blog.author) { %>    
                     <p><%= blog.author %></p>
                 <% } %>
-                <% if(blog.blog){ %>    
-                    <p class="card-text"><%= blog.blog %></p>
-                <% } %>
+                <% if(blog.blog) { 
+                        let preview = blog.blog.length > 100 ? blog.blog.substring(0, 100) + ' ... <a href="/readme/' + blog.author + '">Read more</a>' : blog.blog; %>
+                        <p class="card-text readmore"><%- preview %></p>
+                    <% } %>
             </div>
            
         </div>
