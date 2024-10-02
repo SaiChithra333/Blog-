@@ -1,0 +1,105 @@
+body{
+    background-color: #fffcf2;
+    display:flex;
+    flex-direction:column
+    
+}
+.nav-link{
+    color:#14213D ;
+    font-size: 1.5rem;
+}
+.nav-link.disabled{
+    background-color: #14213D;
+    color: #fbfbf7;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 15px;
+    
+}
+.bordercolor{
+    border-color: #14213D;
+}
+.nav a:hover {
+    color: #FCA311;
+  }
+
+  main {
+    display: flex;
+    flex: 100vh ;
+  }
+  .editbtns{
+    /* background-color: #14213D; */
+    border-color: #14213D;
+  }
+ 
+  .card-img-top {
+    width: 100%;   /* Ensures image takes full card width */
+    height: 200px; /* Sets a fixed height */
+    object-fit: cover; /*Ensures image fills the box while maintaining aspect ratio*/
+}
+.card{
+  background-color: #fbfbf7;
+  border-color: #201f1f0c;
+}
+.container.padcontainer{
+  padding: 40px 200px 20px 200px;
+}
+.links a:hover{
+  background-color: #14213D;
+
+  color: #fbfbf7;
+}
+.blogcontainer{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.noblogscont{
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  height: 100vh;
+  align-items: center;
+  gap: 10px;
+}
+.noblogscont a{
+  font-size: 1rem;
+  color: #14213D;
+}
+.readmeimg{
+  object-fit: contain;
+  background-color:#fffcf2;
+  height: 300px;
+  margin-top: 25px;
+}
+.readmehead{
+  margin-block: 15px;
+  text-align: center;
+  font-size: 2rem;
+}
+.readmetxt{
+  
+  font-size: 1.5rem;
+}
+.hovercard{
+  height: 100px;
+}
+.hovercard:hover{
+
+  /* transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);; */
+  opacity: 1;
+  border: 1px solid #201f1f0c;
+  border-radius: 10px;
+  zoom: 105%;
+}
+.headpoints{
+  text-decoration: none;
+  cursor:pointer
+}
+.headpoints:hover{
+  text-decoration: underline;
+}
+.readmore a{
+  color: #14213D;
+}

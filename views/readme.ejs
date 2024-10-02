@@ -1,0 +1,28 @@
+<%- include("./partials/header.ejs") %>
+<% if(locals.blogs){ %>
+<div class="card my-3" style="width: 100%;">
+    <% if(blogs.fileimg){ %>
+        <img src="/images/<%= blogs.fileimg %>" class="readmeimg card-img-top" alt="...">
+    <% } %>
+    <div class="readmetxt card-body">
+        <% if(blogs.heading) { %>    
+            <h5 class="readmehead card-title"><%= blogs.heading %></h5>
+        <% } %>
+        <% if(blogs.author) { %>    
+            <p><%= blogs.author %></p>
+        <% } %>
+        <% if(blogs.blog){ %>    
+            <p class="card-text"><%= blogs.blog %></p>
+        <% } %>
+    </div>
+   
+</div>
+<% } else{%>
+   <div class="noblogscont ">
+    <h1 style="display: block;">No Blogs </h1>
+    
+    <a href="/create">Create A Blog</a>
+   </div>
+    <% } %>
+
+<%- include("./partials/footer.ejs") %>

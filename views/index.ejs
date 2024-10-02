@@ -1,0 +1,33 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="container d-flex flex-wrap justify-content-around  ">
+    <% if(blogs.length > 0) { %>
+    <% blogs.forEach(function (blog) { %> 
+            <div class="hovercard card my-3" style="width: 18rem; height: auto;">
+                <% if(blog.fileimg) { %>
+                    <img src="/images/<%= blog.fileimg %>" class="card-img-top" alt="..." onclick="window.location.href='/readme/<%= blog.author %>'">
+                <% } %>
+                <div class="card-body">
+                    <% if(blog.heading) { %>    
+                        <h5><a href="/readme/<%= blog.author %>" class="headpoints card-title"><%= blog.heading %></a></h5>
+                    <% } %>
+                    <% if(blog.author) { %>    
+                        <p><%= blog.author %></p>
+                    <% } %>
+                    <% if(blog.blog) { 
+                        let preview = blog.blog.length > 100 ? blog.blog.substring(0, 100) + ' ... <a href="/readme/' + blog.author + '">Read more</a>' : blog.blog; %>
+                        <p class="card-text readmore"><%- preview %></p>
+                    <% } %>
+                </div>
+            </div>
+    <% }); %>
+
+    <% } else { %>
+        <div class="noblogscont">
+            <h1>No Blogs</h1>
+            <a href="/create">Create A Blog</a>
+        </div>
+    <% } %>
+</div>
+
+<%- include("./partials/footer.ejs") %>
